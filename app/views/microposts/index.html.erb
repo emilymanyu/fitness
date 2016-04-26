@@ -1,0 +1,20 @@
+<div class="col-md-offset-2 col-md-9">
+ 	<div class="center"> 	
+ <div class="alert alert-warning">
+	<h1>All Microposts</h1>
+	</div>
+	<% @microposts.each do |micropost| %>
+
+	<div><div class="alert alert-info fade in">
+		<div class="alert alert-success fade in">   
+    <p><%= micropost.user.name %></p>
+
+		<%=  image_tag(micropost.image.url) %>
+		<p><%= micropost.content %></p>
+		
+		<%= link_to "view and make reviews", micropost, class: "btn btn-primary" %>
+	</div>
+	</div>
+	<% end %>
+</div>
+</div>

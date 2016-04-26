@@ -1,0 +1,33 @@
+
+<body>
+<p id="notice"><%= notice %></p>
+<div class="alert alert-info fade in">
+<h1>Share Courses</h1>
+ 
+<div class="row">
+    <% @courses.each do |course| %>
+
+      <div class="col-md-6">
+      <div class="jumbotron">
+        <h1><%= course.name %></h1>
+        <p><%= course.address %></p>
+        <p><%= link_to 'Show', course ,class: "btn btn-primary"%></p>
+        <td><%= link_to 'Comment', course %>&nbsp&nbsp</td>
+       
+      </div>
+
+  </div>
+    <% end %>
+     </div>
+
+
+<br>
+</body>
+
+<table align="center">
+  <tr><td>
+<%= link_to 'New Course', new_course_path, class: "btn btn-primary" %>
+<%= link_to 'Videos', videos_path, class: "btn btn-primary" %>
+</tr></td>
+</table>
+</div>

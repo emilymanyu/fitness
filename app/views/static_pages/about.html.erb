@@ -1,0 +1,38 @@
+        
+        <!DOCTYPE html>
+   <html>
+   <head>
+   <style> 
+#myDIV {
+    height: 200px;
+    background-color: lightblue;
+    -webkit-animation: mymove 5s infinite; /* Chrome, Safari, Opera */
+    animation: mymove 5s infinite;
+}
+
+/* Chrome, Safari, Opera */
+@-webkit-keyframes mymove {
+    50% {margin: 50px;}
+}
+
+/* Standard syntax */
+@keyframes mymove {
+    50% {margin: 50px;}
+}
+</style>
+</head>
+<body>
+	<% provide(:title, 'About Us') %>
+	<div id="myDIV">
+        <h1 align=center>About Us</h1>
+        <p align=center>
+         This is ManyuXu' project about fitness,
+
+          if you have any questions you can connect her.
+         
+        </p>
+        <p align=center>Good Luck!</p>
+       </div> 
+</body>
+</html>
+<%= image_tag("11.jpg", alt:"First", :size => "1150x400") %>

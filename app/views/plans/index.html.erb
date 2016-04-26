@@ -1,0 +1,62 @@
+
+
+<body>
+
+<div class="center jumbotron">
+  <div id="myCarousel" class="carousel slide">
+   <!-- （Carousel）indicator -->
+   <ol class="carousel-indicators">
+      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+      <li data-target="#myCarousel" data-slide-to="1"></li>
+
+   </ol>
+
+<div class="carousel-inner">
+      <div class="item active">
+         <%= image_tag("9.jpg", alt:"First", :size => "1000x150") %>
+      </div>
+
+      <div class="item">
+         <%= image_tag("10.jpg",:size => "1000x150") %>
+      </div>
+   </div>
+<h1>Listing Plans</h1>
+<p id="notice"><%= notice %></p>
+<table class="table table-striped table-bordered table-hover">
+  <thead>
+    <tr>
+      <th>Strat time&nbsp&nbsp</th>
+      <th>End time&nbsp&nbsp</th>
+      <th>Distance&nbsp&nbsp</th>
+      <th>Location&nbsp&nbsp</th>
+      <th>State&nbsp&nbsp</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @plans.each do |plan| %>
+      <tr>
+        <td><%= plan.strat_time %></td>
+        <td><%= plan.end_time %></td>
+        <td><%= plan.distance %></td>
+        <td><%= plan.progress %></td>
+        <td><%= plan.state %></td>
+
+
+
+      <td><%= link_to 'Show', plan %>&nbsp&nbsp</td>
+        
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+</body>
+
+<table align="center">
+  <tr><td>
+ <%= link_to 'New Plan', new_plan_path, class: "btn btn-primary" %>
+</tr></td>
+</table>

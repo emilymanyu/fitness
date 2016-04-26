@@ -1,0 +1,65 @@
+
+
+<body>
+  <h2><p id="notice"><%= notice %></p>
+
+
+<p>
+  <strong>Strat time:</strong>
+  <%= @plan.strat_time %>
+</p>
+
+<p>
+  <strong>End time:</strong>
+  <%= @plan.end_time %>
+</p>
+
+<p>
+  <strong>Distance:</strong>
+  <%= @plan.distance %>
+</p>
+
+<p>
+  <strong>Progress:</strong>
+  <%= @plan.progress %>
+            <td>Maked by :<%= plan.user.name %></td>
+
+</p>
+
+<p>
+  <strong>State:</strong>
+  <%= @plan.state %>
+</p>
+</h2>
+<h2>Comments</h2>
+<% @plan.suggestions.each do |comment| %>
+
+  <p>
+    <strong>Comment:</strong>
+    <%= suggestion.content %>
+  </p>
+ <p>
+  <%= link_to 'Destroy Comment', [suggestion.product, suggestion],
+               method: :delete,
+               data: { confirm: 'Are you sure?' } %>
+</p>
+<% end %>
+
+
+<h2>Add a comment:</h2>
+<%= form_for([@plan, @plan.suggestions.build]) do |f| %>
+   <div class = "center">
+   <%= f.label :content %>
+   <%= f.text_field :content%>
+
+   </div>
+   <div class = "center">
+<%= f.submit "Create new comment", class: "btn btn-large btn-primary" %>
+   </div>
+<% end %>
+</body>
+
+
+
+<%= link_to 'Edit', edit_plan_path(@plan) %> |
+<%= link_to 'Back', plans_path %>

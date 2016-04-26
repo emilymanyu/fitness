@@ -1,0 +1,54 @@
+
+<div class="alert alert-warning">
+
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>From name:</strong>
+  <%= @request.from_name %>
+</p>
+
+<p>
+  <strong>To name:</strong>
+  <%= @request.to_name %>
+</p>
+
+<p>
+  <strong>Status:</strong>
+  <%= @request.status %>
+</p>
+<% @request.suggestions.each do |suggestion| %>
+<p>
+  <strong>Comment by <%= suggestion.user.name %>:
+  </strong>
+  
+
+  <p><%= suggestion.content %></P>
+  
+
+
+  <%end%>
+
+</p>
+
+
+
+
+<h2>Add a comment:</h2>
+<%= form_for([@request, @request.suggestions.build]) do |f| %>
+   <div class = "center">
+     <%= f.label :content %></br>
+     <%= f.text_field :content, style: "width:600px;height:70px;font-size:50px;margin-bottom:30px"%>
+
+   </div>
+   <div class="col-md-offset-1 col-md-7">
+
+<%= f.submit "Create new comment", class: "btn btn-primary " ,style: "width:400px;height:35px;font-size:20px;margin-left:270px;margin-bottom:20px" %>
+   </div>
+<% end %>
+<br><br><br>
+
+</div>
+
+
+<%= link_to 'Back', requests_path %>

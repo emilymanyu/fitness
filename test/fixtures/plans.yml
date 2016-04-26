@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  strat_time: MyString
+  end_time: MyString
+  distance: 1
+  progress: MyString
+  state: MyString
+
+two:
+  strat_time: MyString
+  end_time: MyString
+  distance: 1
+  progress: MyString
+  state: MyString

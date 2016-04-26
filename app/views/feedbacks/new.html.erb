@@ -1,0 +1,32 @@
+
+<body>
+<h1><font color=blue size=24>New Feedback</font></h1>
+<div class="row">
+  <div class="col-md-offset-3 col-md-6">
+<%= form_for(@feedback) do |f| %>
+
+    <%= f.label :star %>
+    <table>
+    <tr>
+    <td width="70px"><%= f.radio_button :star, '1', :checked => true %> rate one</td>
+    <td width="70px"><%= f.radio_button :star, '2' %> rate two</td>
+    <td width="70px"><%= f.radio_button :star, '3' %> rate three</td>
+    <td width="70px"><%= f.radio_button :star, '4' %> rate four</td>
+    <td width="70px"><%= f.radio_button :star, '5' %> rate five</td>
+    </tr>
+    </table>
+    <br>
+    <%= render 'form'%>
+
+
+<% end %>
+  </div>
+</div>
+
+</body>
+
+
+
+
+
+<%= link_to 'Back', feedbacks_path %>

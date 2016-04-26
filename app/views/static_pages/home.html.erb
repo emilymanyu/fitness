@@ -1,0 +1,135 @@
+
+
+<!DOCTYPE html>
+
+<html>
+
+<head>
+<style> 
+#myDIV {
+    -webkit-animation: mymove 5s infinite; /* Chrome, Safari, Opera */
+    animation: mymove 5s infinite;
+}
+
+/* Chrome, Safari, Opera */
+@-webkit-keyframes mymove {
+    50% {text-shadow: 10px 20px 30px blue;}
+}
+
+/* Standard syntax */
+@keyframes mymove {
+    50% {text-shadow: 10px 20px 30px blue;}
+}
+</style>
+</head>
+<body>
+
+<div class="abc">
+  <% if logged_in? %>
+      <div class="row">
+        <aside class="col-md-4">
+          <section class="user_info">
+            <%= render 'shared/user_info' %>
+          </section>
+          <section class="micropost_form">
+            <%= render 'shared/micropost_form' %>
+          </section>
+        </aside>
+        <div class="col-md-6">
+         <%= render 'shared/feed'%>
+        </div>
+      </div>
+
+    <% else %>
+<!--div class="jumbotron"-->
+      <!--div class="container"-->
+      <div id="myCarousel" class="carousel slide">
+   <!-- （Carousel）indicator -->
+   <ol class="carousel-indicators">
+      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+      <li data-target="#myCarousel" data-slide-to="1"></li>
+      
+   </ol>   
+   <!-- （Carousel）content-->
+   
+      <div class="center jumbotron">
+
+
+
+
+<div class="carousel-inner">
+      <div class="item active">
+         <%= image_tag("2.jpg", alt:"First", :size => "1000x500") %>
+      </div>
+      
+      <div class="item">
+         <%= image_tag("1.jpg",:size => "1000x500") %>
+      </div>
+   </div>
+   <!-- (Carousel）navigation -->
+   <a class="carousel-control left" href="#myCarousel" 
+      data-slide="prev">&lsaquo;</a>
+   <a class="carousel-control right" href="#myCarousel" 
+      data-slide="next">&rsaquo;</a>
+</div> 
+        <div id="myDIV">
+
+
+  <h1>Meet your ideal body</h1>
+  <p align=center>"FITNESS" IS NOT QUITING.
+  <br align=center>IT'S GETTING UP ONE MORE TIME.
+  <br/>
+  </p>
+</div>
+
+     <p align=center ><%=link_to "Sign up now!", signup_path, class: "btn btn-lg btn-primary" %></p>
+      
+     <div class="neighborhood-guides">
+    <div class="container">
+   
+    <div class="row">
+    <div class="col-md-4">
+    <div class="thumbnail">
+      <%= image_tag("9.jpg", alt:"First", :size => "800x400") %>
+      </div>
+       
+     </div>
+     <div class="col-md-4">
+      <div class="thumbnail">
+      <%= image_tag("31.jpg", alt:"First", :size => "800x400") %>
+      </div>
+      </div>
+      <div class="col-md-4">
+      <div class="thumbnail">
+     <%= image_tag("10.jpg", alt:"First", :size => "800x400") %>
+      </div>
+       </div>
+    </div>
+   </div>
+   </div>
+    <div class="learn-more">
+    <div class="container">
+      <h2>Relative</h2>
+    <div class="row">
+     <div class="col-md-4">
+      <h3>Fitness foods</h3>
+      <p>Trying to get fit? Katie Hiscock's top 10 fitness foods will help fuel your body to get the most from your workouts and to aid recovery. Next time you're at the supermarket make sure you stock up on these staples...</p>
+      <p><a href="http://www.bbcgoodfood.com/howto/guide/our-top-10-fitness-foods" ><font color=blue size=2>See the top 10 fitness foods</font></a></p>
+        </div>
+      <div class="col-md-4">
+      <h3>Fitness Equipment </h3>
+      <p>Do you need some fitness equipmets, we provide a full of range of equipments shops to you and you can choose them according to your choices.</p>
+      <p><a href="https://www.google.ie/webhp?sourceid=chrome-instant&rlz=1C5CHFA_enIE665IE665&ion=1&espv=2&ie=UTF-8#q=fitness%20equipment&tbs=lf:1,lf_ui:2&rflfq=1&rlha=0&tbm=lcl&rlfi=hd:;si:10661946056358544113"><font color=blue size=2>Learn  about these shops</font></a></p>
+      </div>
+      <div class="col-md-4">
+      <h3>Fitness online shopping</h3>
+      <p>Fitness Ireland was established in 2003, and is the largest and longest established sports supplements retailer in Ireland.We offer great deals and lowest prices on all the major brands of supplements - including great Irish supplement brands.</p>
+      <p><a href="http://www.fitnessireland.ie/"><font color=blue size=2>Learn about Fitness Ireland</font></a></p>
+      </div>
+      </div>
+    </div>
+  </div>
+  <%end%>
+</div>
+  </body>
+</html>

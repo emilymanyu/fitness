@@ -1,0 +1,41 @@
+ <div class="alert alert-info fade in">
+   
+    <h1>Reviews!</h1> 
+
+
+<div class="jumbotron">
+    <div class="container">
+		
+	    <%=  image_tag @micropost.image.url %>
+	   
+   <div class="alert alert-success fade in">
+
+   <p><%= @micropost.content %></p>
+</div>
+		
+		<%= link_to "Write a Review", new_micropost_review_path(@micropost), class: "btn btn-primary" %>
+        <%= link_to 'Back', microposts_path, class: "btn btn-primary" %>
+	</div>
+	
+ 
+<% @reviews.each do |review| %>
+       <div class="alert alert-warning">
+   
+    <strong>Comment by <%= review.user.name%>:		</strong> 
+    	
+		<p><%= review.rating%></p>
+		<p><%= review.comment%></p>		
+
+			
+
+
+	</div>
+	<% end %>
+</div>
+</div>
+
+
+
+
+
+

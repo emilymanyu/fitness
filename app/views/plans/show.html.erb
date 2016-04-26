@@ -1,0 +1,57 @@
+
+
+<body>
+  <div class="alert alert-info fade in">
+   
+<p id="notice"><%= notice %></p>
+
+<div class="row">
+	<div class="col-md-8">
+	<p>
+	  <strong>Location:</strong>
+	  <br>
+	  <iframe
+	        width="500"
+	        height="400"
+	        frameborder="0" style="border:0"
+	        src="https://www.google.com/maps/embed/v1/place?key=AIzaSyDSgXnnbTTdfHzBxLvsBruygkc0aTP8RiQ&q=<%= @plan.progress.parameterize %>&zoom=14">
+	    </iframe>
+
+	</p>
+	</div>
+	<div class="col-md-4">
+           <br>
+           <br>
+			<p>
+			<strong>Maked by :<%= @plan.user.name %></strong>
+
+			</p>
+			<strong>State:<%= @plan.state %></strong>
+			<p>
+			  <strong>Strat time:</strong>
+			  <%= @plan.strat_time %>
+			</p>
+
+			<p>
+			  <strong>End time:</strong>
+			  <%= @plan.end_time %>
+			</p>
+
+			<p>
+			  <strong>Distance:</strong>
+			  <%= @plan.distance %>
+			</p>
+
+    </div>
+
+ </div>
+
+
+
+<%= link_to 'Back', plans_path %>
+</body>
+
+
+
+
+

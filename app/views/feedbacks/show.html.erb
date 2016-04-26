@@ -1,0 +1,25 @@
+
+
+
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Type:</strong>
+  <%= @feedback.type %>
+</p>
+
+<p>
+  <strong>Comment:</strong>
+  <%= @feedback.comment %>
+</p>
+
+<p>
+  <strong>Star:</strong>
+  <%= @feedback.star %>
+</p>
+
+<%= link_to 'Edit', edit_feedback_path(@feedback) %> |
+<%= link_to 'Back', feedbacks_path %>
+</stytle>
+</head>
+</html>

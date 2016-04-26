@@ -1,0 +1,72 @@
+      
+
+
+
+<style>
+
+
+#div1 {
+    position: relative;
+    margin: auto;
+    height: 150px;
+    width: 250px;
+    padding: 10px;
+    border: 1px solid black;
+    /* Chrome, Safari, Opera */
+    -webkit-perspective: 200px;
+    -webkit-animation: mymove 5s infinite;
+    /* Standard syntax */
+    animation: mymove 5s infinite;
+    perspective: 200px;
+}
+
+/* Chrome, Safari, Opera */
+@-webkit-keyframes mymove {
+    50% {-webkit-perspective: 100px;}
+}
+
+/* Standard syntax */
+@keyframes mymove {
+    50% {perspective: 100px;}
+}
+
+#div2 {
+    padding: 50px;
+    position: absolute;
+    border: 1px solid black;
+    background-color: #BBFFEE;
+    -webkit-transform: rotateX(45deg); /* Chrome, Safari, Opera */
+    transform: rotateX(45deg);
+}
+</style>
+
+<body>
+
+<% provide(:title, 'Help') %>
+<div class="alert alert-info fade in">
+        <h1 style="color:black;">Help</h1>
+
+<div id="div1">
+    <p style="color:#9900FF
+#; font-size:20px">To get help on this sample, good luck! </p>
+    
+   
+  <div id="div2">If you have any questions, to give us your feedback.
+    <br>
+    <div class="row">
+    <div class="col-md-offset-1 col-md-2">
+     <%= link_to "Post Feedback", new_feedback_path , class: "btn btn-primary"%>
+    </div>
+   </div>
+  </div>
+</div>
+ </div>
+
+</body>
+
+			
+
+		
+        
+        
+  

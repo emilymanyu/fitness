@@ -1,0 +1,48 @@
+
+
+<body>
+<h2><p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @request.name %>
+</p>
+
+
+</h2>
+<div class="alert alert-info fade in">
+<h2>Comments</h2>
+<% @request.suggestions.each do |comment| %>
+
+  <p>
+    <strong>Comment:</strong>
+    <%= comment.content %>
+  </p>
+ <p>
+  <%= link_to 'Destroy Comment', [comment.product, comment],
+               method: :delete,
+               data: { confirm: 'Are you sure?' } %>
+</p>
+<% end %>
+ </div>
+
+<h2>Add a comment:</h2>
+<%= form_for([@request, @request.suggestions.build]) do |f| %>
+   <div class = "center">
+   <%= f.label :content %>
+   <%= f.text_field :content%>
+
+   </div>
+   <div class = "center">
+<%= f.submit "Create new comment", class: "btn btn-large btn-primary" %>
+   </div>
+<% end %>
+
+
+
+
+</body>
+
+
+<%= link_to 'Edit', edit_course_path(@course) %> |
+<%= link_to 'Back', courses_path %>

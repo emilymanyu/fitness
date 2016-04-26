@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  data: MyString
+  temp_high: MyString
+  temp_low: MyString
+  weather: MyString
+
+two:
+  data: MyString
+  temp_high: MyString
+  temp_low: MyString
+  weather: MyString

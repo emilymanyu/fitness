@@ -1,0 +1,36 @@
+
+
+<body>
+<h1><p id="notice"><%= notice %></p><h1>
+
+<h1>Message Board</h1>
+
+    <% @requests.each do |request| %>
+        <div class="panel panel-primary">
+          <div class="panel-heading">
+            <h3 class="panel-title">
+              From <%= request.from_name %> to <%= request.to_name %></h3>
+          </div>
+          <div class="panel-body">
+            <%= request.status %>
+          </div>
+          <div class="panel-foot">
+            <div class="row">
+              <div class="col-md-offset-10 col-md-3">
+                <td><%= link_to 'Show', request , class: "btn btn-primary"%>&nbsp&nbsp</td>
+                
+              </div>
+            </div>
+      </div>
+    </div>
+    <% end %>
+
+<br>
+<table align="center">
+  <tr><td>
+<%= link_to 'New request', new_request_path, class: "btn btn-primary"%>
+</tr></td>
+</table>
+
+
+</body>
