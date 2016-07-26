@@ -1,0 +1,6 @@
+{
+  "name": "Fitness",
+  "tagline": "Ruby on rails",
+  "body": "这是基于ruby语言，ruby on rails框架的健身网站。\r\n可以登录注册，第三方登录；可以查看及时天气情况和接下来一周的天气状况；可以发，删博客，可以评论其他用户博客；可以看健身视频教学，可以分享自己喜欢的视频，可以评论分享出来的视频；可以制定自己的健身计划，可以分享自己的实时定位（Google map）；有留言板功能；可以反馈feedback给管理员；管理员可以会管理用户。\r\n标签：bootstrap,css,html,javascript,ruby on rails,SQLite,java.\r\n欢迎大家提取意见！",
+  "note": "Don't delete this file! It's used internally to help with page regeneration."
+}
